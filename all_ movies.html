@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Poster Slideshow</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        #slideshow-container {
+            position: relative;
+            max-width: 800px;
+            margin: auto;
+        }
+        .movie-poster {
+            display: none;
+            width: 100%;
+        }
+        .slideshow-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="slideshow-container">
+        <img class="movie-poster" src="movie1.jpeg" alt="Movie Poster 1">
+        <img class="movie-poster" src="poster2.jpg" alt="Movie Poster 2">
+        <img class="movie-poster" src="poster3.jpg" alt="Movie Poster 3">
+        <!-- Add more images as needed -->
+        <div class="slideshow-caption">Movie Title 1</div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.getElementsByClassName("movie-poster");
+        const captions = ["Movie Title 1", "Movie Title 2", "Movie Title 3"]; // Add captions for each movie poster
+
+        function showSlide(n) {
+            if (n < 0) {
+                currentSlide = slides.length - 1;
+            } else if (n >= slides.length) {
+                currentSlide = 0;
+            } else {
+                currentSlide = n;
+            }
+
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[currentSlide].style.display = "block";
+            document.querySelector(".slideshow-caption").innerText = captions[currentSlide];
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        showSlide(currentSlide);
+        setInterval(nextSlide, 3000); // Change slide every 3 seconds
+    </script>
+</body>
+</html>
