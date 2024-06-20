@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update PDF</title>
+</head>
+<body>
+    <h1>Update Payslip Information</h1>
+    <form action="/update-pdf" method="POST">
+        <label for="employee_name">Employee Name:</label>
+        <input type="text" id="employee_name" name="employee_name" required><br><br>
+
+        <label for="employee_number">Employee Number:</label>
+        <input type="text" id="employee_number" name="employee_number" required><br><br>
+
+        <label for="date_joined">Date Joined:</label>
+        <input type="date" id="date_joined" name="date_joined" required><br><br>
+
+        <label for="department">Department:</label>
+        <input type="text" id="department" name="department" required><br><br>
+
+        <label for="designation">Designation:</label>
+        <input type="text" id="designation" name="designation" required><br><br>
+
+        <label for="basic">Basic Salary:</label>
+        <input type="text" id="basic" name="basic" required><br><br>
+
+        <label for="hra">HRA:</label>
+        <input type="text" id="hra" name="hra" required><br><br>
+
+        <label for="lta">LTA:</label>
+        <input type="text" id="lta" name="lta" required><br><br>
+
+        <label for="city_allowance">City Allowance:</label>
+        <input type="text" id="city_allowance" name="city_allowance" required><br><br>
+
+        <label for="gratuity">Gratuity:</label>
+        <input type="text" id="gratuity" name="gratuity" required><br><br>
+
+        <button type="submit">Update PDF</button>
+    </form>
+</body>
+</html>
