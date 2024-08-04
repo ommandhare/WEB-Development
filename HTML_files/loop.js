@@ -7,7 +7,7 @@
 
 
 
-// document.write("<br>WHILE<br>")
+// // document.write("<br>WHILE<br>")
 
 // let text = "";
 // let i = 0;
@@ -15,4 +15,13 @@
 //     document.write("the number is ",i,"<br>")
 //   i++;
 // }
+
+
+const person = {fname:"John", lname:"Doe", age:25}; 
+
+let txt = "";
+for (let x in person) {
+  document.write(person[x],"<br>")
+}
+
 

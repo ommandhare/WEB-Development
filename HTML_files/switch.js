@@ -1,4 +1,4 @@
-let a=2
+let a="hii"
 
 switch (a) {
     case 0:
@@ -21,6 +21,8 @@ switch (a) {
       break;
     case 6:
       day = "Saturday";
+    default:
+      day="no day"
   }
 
 
