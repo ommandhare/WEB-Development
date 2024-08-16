@@ -22,7 +22,7 @@ lower=string.toLowerCase();
 document.write("<br>",lower)
 
 
-sliced=string.slice(2,7)
+sliced=string.slice(2,5)
 document.write("<br>",sliced,"<br>")
 
 

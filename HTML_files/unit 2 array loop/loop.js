@@ -17,11 +17,11 @@
 // }
 
 
-const person = {fname:"John", lname:"Doe", age:25}; 
+// const person = {fname:"John", lname:"Doe", age:25}; 
 
-let txt = "";
-for (let x of person) {
-  document.write(person,"<br>")
-}
+// let txt = "";
+// for (let x in person) {
+//   document.write(person.age,"<br>")
+// }
 
 

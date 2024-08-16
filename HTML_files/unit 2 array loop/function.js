@@ -1,8 +1,8 @@
 // let a=10
 // let b=20
 
-// v1=prompt("enter first")
-// v2=prompt("enter second")
+v1=prompt("enter first")
+v2=prompt("enter second")
 
 
 

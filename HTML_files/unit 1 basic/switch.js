@@ -1,4 +1,4 @@
-let a="hii"
+let a=""
 
 switch (a) {
     case 0:
