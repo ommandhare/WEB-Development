@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DYNAMIC CHANGE</title>
+</head>
+<body>
+    <form name="dynamic">
+        <select id="subjectSelect" name="frm1" size="3">
+            <option value="1">WPD</option>
+            <option value="2">PIC</option>
+            <option value="3">Maths</option>
+        </select>
+                 
+        <input type="radio" name="subjects" value="1" onclick="display(this.value)">First
+        <input type="radio" name="subjects" value="2" onclick="display(this.value)">Second
+    
+    </form>
+
+</body>
+
+<script>
+    function display(ElementValue) {
+        const subjectSelect = document.getElementById('subjectSelect');
+
+        if (ElementValue == 1) {
+            subjectSelect.options[0].text = "WPD";
+            subjectSelect.options[0].value = 1;
+            subjectSelect.options[1].text = "PIC";
+            subjectSelect.options[1].value = 2;
+            subjectSelect.options[2].text = "Maths";
+            subjectSelect.options[2].value = 3;
+        } else if (ElementValue == 2) {
+            subjectSelect.options[0].text = "OOP";
+            subjectSelect.options[0].value = 1;
+            subjectSelect.options[1].text = "DSU";
+            subjectSelect.options[1].value = 2;
+            subjectSelect.options[2].text = "DBMS";
+            subjectSelect.options[2].value = 3;
+        }
+    }
+</script>
+
+</html>

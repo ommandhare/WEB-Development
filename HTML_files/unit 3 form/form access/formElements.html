@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form elements</title>
+</head>
+<body>
+    <form name="entry">
+        Country: <input type="text" name="Cname">
+        <input type="button"  value="show" onclick="display()">
+    </form>
+
+</body>
+
+<script>
+    function display()
+    {   
+        alert("Country is " + document.forms.entry.Cname.value)
+
+
+        // with(document.forms.entry)
+        // alert("Country is " + Cname.value)
+    }
+</script>
+</html>

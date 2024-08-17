@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form element array</title>
+</head>
+<body>
+    <form name="sample">
+     Country: <input type="text" name="cname">
+     State: <input type="text" name="sname">
+     City: <input type="text" name="cityname">
+     <input type="submit" onclick="display()">
+    </form>
+
+
+
+<script>
+    function display()
+    {
+    with(document.forms.sample)
+    {
+       document.write("country is "+elements[0].value+
+       "<br>state is "+elements[1].value
+        + "<br>city is "+elements[2].value
+         )
+    }
+}
+</script>
+</body>
+</html>
