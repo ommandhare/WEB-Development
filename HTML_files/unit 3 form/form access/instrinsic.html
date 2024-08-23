@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function abs(x) {
+    return Math.abs(x);
+}
+
+// Sine
+function sin(x) {
+    return Math.sin(x);
+}
+
+// Square root
+function sqrt(x) {
+    return Math.sqrt(x);
+}
+
+// Current date
+function currentDate() {
+    return new Date();
+}
+
+// Length of a string
+function len(str) {
+    return str.length;
+}
+
+// Parse integer
+function parseIntValue(str) {
+    return parseInt(str, 10); // The second argument is the radix (base 10)
+}
+
+function parseFloatValue(str) {
+    return parseFloat(str);
+}
+
+// Example usage
+document.write(abs((-5))); // 5
+document.write("<br><br>")
+document.write(sin(Math.PI / 2)); 
+document.write("<br>Squareroot<br>")// 1
+document.write(sqrt(16)); // 4
+document.write("<br>Date<br>")
+document.write(currentDate()); // Current date and time
+document.write("<br>String length<br>")
+document.write(len("Hello, world!")); // 13
+document.write("<br>")
+document.write(parseIntValue("1230")); // 123
+document.write("<br>")
+document.write(parseFloatValue("123.45")); // 123.45
+document.write("<br>")
+    </script>
+</html>
