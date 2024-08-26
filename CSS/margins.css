@@ -1,0 +1,11 @@
+body{
+    border:2px solid green ;
+    margin-right: 50px;
+
+}
+
+
+div{
+    padding: 20px;
+    border: 2px dotted pink;
+}
