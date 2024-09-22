@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delete Cookie</title>
+  </head>
+  <script>
+    function setCookie() {
+        document.cookie = "className=PHILOMATH; expires=Sat,30 Dec 2024 12:00:00 UTC; path=/;";
+        alert("Cookie 'className' set!");
+    }
+
+    function checkCookies() {
+      console.log("Current Cookies: " + document.cookie);
+
+    }
+
+    function deleteCookie() {
+      document.cookie =
+        "className=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+      alert("Cookie 'className' deleted!");
+      checkCookies();
+    }
+  </script>
+
+
+
+
+  <body>
+    <input type="button" value="Set a cookie" onclick="setCookie()" />
+    <input type="button" value="Check cookies" onclick="checkCookies()" />
+    <input type="button" value="Delete the cookie" onclick="deleteCookie()" />
+
+  </body>
+
+
+
+</html>

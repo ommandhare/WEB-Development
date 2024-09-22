@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>reading cookies</title>
+  </head>
+  <script>
+    function readCookie()
+    {
+    var cookies = document.cookie;
+    document.write("All stored cookies : " + cookies);
+    var cookie_array = cookies.split(";");
+    for (var i = 0; i < cookie_array.length; i++) {
+      var cookie_pair = cookie_array[i];
+      var name_value_array = cookie_pair.split("=");
+      var name = name_value_array[0];
+      var value = name_value_array[1];
+      document.write("<br> Name is :" + name + " and value is : " + value);
+    }
+}
+  </script>
+
+  <body>
+    <p>click the following button to get cookies</p>
+    <input type="button" value="Get Cookies" onclick="readCookie()" />
+  </body>
+</html>

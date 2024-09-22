@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Webpage in New Window</title>
+    <script>
+        function create() {
+            var newWin = window.open("", "", "width=200,height=100");
+            newWin.document.write(`
+                <html>
+                <head>
+                    <meta charset="UTF-8">
+                    <title>New Window</title>
+                </head>
+                <body>
+                    <h3>Hello new web</h3>
+                </body>
+                </html>
+            `);
+            newWin.document.close();
+        }
+    </script>
+</head>
+<body>
+    <p>Click to create a new webpage in a new window:</p>
+    <input type="button" value="Create" onclick="create()">
+</body>
+</html>
