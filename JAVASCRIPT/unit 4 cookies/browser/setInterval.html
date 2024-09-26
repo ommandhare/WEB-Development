@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>set interval</title>
+  </head>
+  <script>
+    function startInterval() {
+      // Changed function name
+      setInterval(displayFunction, 1000);
+    }
+
+    function displayFunction() {
+      document.getElementById("para").innerHTML += "<p>Welcome</p>";
+    }
+  </script>
+  <body>
+    <p>Click to set the time Out</p>
+    <input type="button" value="Start Interval" onclick="startInterval()" />
+    <p id="para">Hello</p>
+  </body>
+</html>

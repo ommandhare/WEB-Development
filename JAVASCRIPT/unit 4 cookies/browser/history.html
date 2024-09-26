@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History</title>
+</head>
+<script>
+    function previous() {
+        window.history.back();
+    }
+    
+    function next() {
+        window.history.forward();
+    }
+</script>
+<body>
+    <p>Click to get History:</p>
+    <input type="button" value="Previous" onclick="previous()">
+    <input type="button" value="Next" onclick="next()">
+</body>
+</html>

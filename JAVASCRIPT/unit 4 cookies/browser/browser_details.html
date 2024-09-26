@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser details</title>
+</head>
+<script>
+function getPath()
+{
+    document.getElementById('output').innerHTML="Webpage file located at "+ window.location.pathname
+}
+function gethost()
+{
+    document.getElementById('output').innerHTML="HOST is "+ window.location.hostname
+}
+function getProtocol()
+{
+    document.getElementById('output').innerHTML="Protocol is  "+ window.location.protocol
+}
+
+
+
+</script>
+
+<body>
+    <p>Get path of web page</p>
+    <input type="button" value="Get Path" onclick="getPath()">
+    <br>
+    <p>Get Host of web page</p>
+    <input type="button" value="Get host" onclick="gethost()">
+    <br>
+    <p>Get Protocol of web page</p>
+    <input type="button" value="Get Protocol" onclick="getProtocol()">
+
+    <p id="output"></p>
+</body>
+</html>
