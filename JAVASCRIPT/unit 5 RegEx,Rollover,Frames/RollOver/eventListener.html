@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    // Define the mouseover function
+    function mouseover() {
+        document.getElementById("para").style.color = "blue";
+    }
+
+    // Define the mouseout function
+    function mouseout() {
+        document.getElementById("para").style.color = "black";
+    }
+
+    // Add event listeners once the document has loaded
+    document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById("para").addEventListener("mouseover", mouseover);
+        document.getElementById("para").addEventListener("mouseout", mouseout);
+    });
+</script>
+<body>
+    <p>Add eventListener</p>
+    <h1><p id="para">Change style by mouseover</p></h1>
+</body>
+</html>
