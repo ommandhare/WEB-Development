@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Non matching characters</title>
+</head>
+<script>
+    var p=/[^abc]/
+    function testnonmatching()
+    {
+        var str=textfield.value
+        if(p.test(str))
+    {
+       alert("The string " +str+ " contains characters other than a,b,c")
+    }
+    else
+    {
+        alert("The string " +str+ " does not contains characters other than a,b,c")   
+    }
+
+    }
+</script>
+<body>
+    Enter the String 
+    <input type="text" id="textfield">
+    <input type="button" value="Check" onclick="testnonmatching()">
+</body>
+</html>

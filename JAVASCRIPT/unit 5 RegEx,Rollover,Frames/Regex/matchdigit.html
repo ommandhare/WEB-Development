@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>matching digits</title>
+</head>
+<script>
+    var p=/\d/
+    function testrange()
+    {
+    var str=textfield.value
+        if(p.test(str))
+    {
+       alert("The string " +str+ " contains digit")
+    }
+    else
+    {
+        alert("The string " +str+ " does not contains digit")   
+    }
+    }
+</script>
+<body>
+    Enter the String 
+    <input type="text" id="textfield">
+    <input type="button" value="Check" onclick="testrange()">
+</body>
+</html>
