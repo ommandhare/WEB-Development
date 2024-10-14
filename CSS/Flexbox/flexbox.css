@@ -1,0 +1,11 @@
+.flex-container {
+    display: flex; /* This makes the container a flexbox */
+    border: 2px solid black;
+   
+  }
+  
+  .flex-item {
+    padding: 10px;
+    border: 1px solid blue;
+  }
+  
