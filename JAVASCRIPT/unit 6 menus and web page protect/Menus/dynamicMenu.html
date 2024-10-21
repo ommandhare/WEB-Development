@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Menu with Subjects</title>
+    <script>
+        function displayTopic() {
+            var select = document.getElementById("select");
+            var selectedValue = select.value; // Get selected company
+            var topic = document.getElementById("topic");
+            var sycoSubjects = document.getElementById("syco-subjects");
+            var tycoSubjects = document.getElementById("tyco-subjects");
+
+            // Reset visibility of both subject dropdowns
+            sycoSubjects.style.display = "none";
+            tycoSubjects.style.display = "none";
+
+            if (selectedValue === "syco") {
+                topic.innerHTML = "<h3>Syco</h3><p>Syco is a global music entertainment company known for managing artists and talent shows.</p>";
+                sycoSubjects.style.display = "block"; // Show Syco's subject dropdown
+            } else if (selectedValue === "tyco") {
+                topic.innerHTML = "<h3>Tyco</h3><p>Tyco International is known for security systems and fire protection services.</p>";
+                tycoSubjects.style.display = "block"; // Show Tyco's subject dropdown
+            } else {
+                topic.innerHTML = "<p>Select a valid option to display more information.</p>";
+            }
+        }
+
+        function getSelectedSubject() {
+            var sycoSelect = document.getElementById("syco-subjects");
+            var tycoSelect = document.getElementById("tyco-subjects");
+            var selectedSubject = "";
+
+            // Check if Syco or Tyco subject is visible and selected
+            if (sycoSelect.style.display === "block") {
+                selectedSubject = sycoSelect.value;
+            } else if (tycoSelect.style.display === "block") {
+                selectedSubject = tycoSelect.value;
+            }
+
+            if (selectedSubject) {
+                alert("The selected subject is: " + selectedSubject);
+            } else {
+                alert("No subject selected.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Dynamic Dropdown with Company and Subjects</h2>
+
+    <!-- Dropdown menu for companies -->
+    <select id="select" onchange="displayTopic()">
+        <option value="" disabled selected>Select a company</option>
+        <option value="syco">Syco</option>
+        <option value="tyco">Tyco</option>
+    </select>
+
+    <br><br>
+
+    <!-- Section to display the topic based on the selected option -->
+    <div id="topic">
+        <p>Select a company from the dropdown menu to learn more.</p>
+    </div>
+
+    <!-- Dropdown for Syco subjects (hidden by default) -->
+    <div id="syco-subjects" style="display: none;">
+        <h4>Syco Subjects</h4>
+        <select id="syco-select">
+            <option value="c">C</option>
+            <option value="php">PHP</option>
+            <option value="java">Java</option>
+        </select>
+    </div>
+
+    <!-- Dropdown for Tyco subjects (hidden by default) -->
+    <div id="tyco-subjects" style="display: none;">
+        <h4>Tyco Subjects</h4>
+        <select id="tyco-select">
+            <option value="security">Security</option>
+            <option value="fire-protection">Fire Protection</option>
+            <option value="healthcare">Healthcare</option>
+        </select>
+    </div>
+
+    <br><br>
+    <!-- Button to display selected subject -->
+    <button onclick="getSelectedSubject()">Get Selected Subject</button>
+
+</body>
+</html>

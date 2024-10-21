@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Status Bar Magic</title>
+    <style>
+        .magic {
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid #000;
+            display: inline-block;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="magic" onmouseover="changeStatus('You hovered over the first box!')" onmouseout="clearStatus()">Hover over me!</div>
+    <div class="magic" onmouseover="changeStatus('You hovered over the second box!')" onmouseout="clearStatus()">Hover over me too!</div>
+
+    <script>
+        function changeStatus(message) {
+            window.status = message;
+        }
+
+        function clearStatus() {
+            window.status = '';
+        }
+    </script>
+</body>
+</html>

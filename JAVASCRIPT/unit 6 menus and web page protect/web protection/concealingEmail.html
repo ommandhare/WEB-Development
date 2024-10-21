@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Conceal</title>
+    <script>
+        hide_email = function(email_address) {
+            var avg, splitted, part1, part2;
+            
+            splitted = email_address.split("@"); // Split at the "@" symbol
+            part1 = splitted[0]; // The part before "@"
+            part2 = splitted[1]; // The part after "@"
+
+            avg = Math.floor(part1.length / 2); // Calculate half of the part1 length
+            
+            // Replace second half of the email address with "..."
+            part1 = part1.substring(0, avg); 
+            
+            return part1 + "...@" + part2; // Return concealed email
+        }
+
+        alert(hide_email("ommandhare007@gmail.com"));
+    </script>
+</head>
+<body>
+    <h3>Email Address is protected</h3>
+</body>
+</html>
