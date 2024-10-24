@@ -1,0 +1,29 @@
+<html> 
+ <body onload="sl()"> 
+  <script>     var a = [ 
+        "https://static01.nyt.com/images/2021/10/08/business/08wheels1/08wheels1superJumbo.jpg?quality=75&auto=webp", 
+        "https://miro.medium.com/v2/resize:fit:640/format:webp/0*_56IwpaJBQY-_Y_0", 
+        "https://cdn-fastly.thetruthaboutcars.com/media/2022/07/20/9479018/curbside-classic-themost-influential-modern-car-in-america-1976-honda-accord.jpg?size=720x845&nocrop=1" 
+      ]; 
+ 	var i=0; 
+ 	function slide() 
+ 	{ 	  
+ 	  document.getElementById("im").src=a[i];  
+        if(i>=2) 
+ 	  { 
+ 	    i=0; 
+ 	  } 
+ 	  else 
+ 	  { 
+ 	   i=i+1; 
+ 	  } 
+ 	} 
+ 	function sl() 
+ 	{ 
+ 	 setInterval(slide,1000); 
+ 	} 
+  </script> 
+  <img id="im" src="https://static01.nyt.com/images/2021/10/08/business/08wheels1/08wheels1superJumbo.jpg?quality=75&auto=webp" width="70%" height="70%"> 
+   
+ </body> 
+</html>
