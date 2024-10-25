@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+
+<div ng-app="myApp" ng-controller="formCtrl">
+  <form ng-submit="submitForm()">
+    First Name: <input type="text" ng-model="firstname">
+    <br>
+    Last Name: <input type="text" ng-model="lastname">
+    <br>
+    Password: <input type="password" ng-model="password">
+    <br>
+    <button type="submit">Submit</button>
+  </form>
+
+</div>
+
+<script>
+  var app = angular.module('myApp', []);
+  app.controller('formCtrl', function($scope) {
+    $scope.firstname = "Om";
+    $scope.lastname = "Mandhare";
+    $scope.password = "hello";
+
+    $scope.submitForm = function() {
+      document.write('Form submitted! \n' +
+            'First Name: ' + $scope.firstname + '\n' +
+            'Last Name: ' + $scope.lastname + '\n' +
+            'Password: ' + $scope.password);
+    };
+  });
+</script>
+
+</body>
+</html>

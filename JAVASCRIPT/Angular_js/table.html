@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+
+<div ng-app="myApp" ng-controller="formCtrl">
+  <!-- Form for Input -->
+  <form ng-submit="submitForm()">
+    First Name: <input type="text" ng-model="firstname" required>
+    <br><br>
+    Last Name: <input type="text" ng-model="lastname" required>
+    <br><br>
+    Password: <input type="password" ng-model="password" required>
+    <br><br>
+    <button type="submit">Submit</button>
+  </form>
+
+  <h3>Submitted Data Table</h3>
+  <!-- Table for Displaying Form Data -->
+  <table border="1">
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Password</th>
+    </tr>
+    <tr ng-repeat="entry in entries">
+      <td>{{entry.firstname}}</td>
+      <td>{{entry.lastname}}</td>
+      <td>{{entry.password}}</td>
+    </tr>
+  </table>
+</div>
+
+<script>
+  var app = angular.module('myApp', []);
+  app.controller('formCtrl', function($scope) {
+    // Initialize the entries array to hold submitted data
+    $scope.entries = [];
+
+    // Function to handle form submission
+    $scope.submitForm = function() {
+      // Push the form data into the entries array
+      $scope.entries.push({
+        firstname: $scope.firstname,
+        lastname: $scope.lastname,
+        password: $scope.password
+      });
+
+      // Optionally clear form fields after submission
+      $scope.firstname = '';
+      $scope.lastname = '';
+      $scope.password = '';
+    };
+  });
+</script>
+
+</body>
+</html>

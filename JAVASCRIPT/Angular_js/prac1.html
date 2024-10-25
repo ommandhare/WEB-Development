@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+
+  <!-- AngularJS Expressions Example -->
+  <h3>AngularJS Expression:</h3>
+  <p>2 + 3 = {{ 2 + 3 }}</p>
+  <p>Welcome {{ user.name }}!</p>
+
+  <!-- ng-model Directive Example -->
+  <h3>ng-model Directive:</h3>
+  <p>Enter your name: <input type="text" ng-model="user.name"></p>
+  <p>Hello, {{ user.name }}!</p>
+
+  <!-- ng-repeat Directive Example -->
+  <h3>ng-repeat Directive:</h3>
+  <p>Here are your favorite fruits:</p>
+  <ul>
+    <li ng-repeat="fruit in fruits">{{ fruit }}</li>
+  </ul>
+
+</div>
+
+<script>
+  var app = angular.module('myApp', []);
+  app.controller('myCtrl', function($scope) {
+    // Initialize a user object
+    $scope.user = { name: "om" };
+    
+    // Initialize an array of fruits
+    $scope.fruits = ["Apple", "Banana", "Cherry", "Mango"];
+  });
+</script>
+
+</body>
+</html>
