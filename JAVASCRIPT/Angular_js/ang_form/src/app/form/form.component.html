@@ -1,0 +1,15 @@
+<form (ngSubmit)="handleSubmit()">
+    <label for="fname">First Name:</label>
+    <input type="text" name="fname" [(ngModel)]="fname" id="fname" />
+    <label for="lname">Last Name:</label>
+    <input type="text" name="lname" [(ngModel)]="lname" id="lname" />
+    <label for="email">Email</label>
+    <input type="text" name="email" [(ngModel)]="email" id="email" />
+    <button type="submit">Submit</button>
+  </form>
+  
+  <div *ngIf="submitted">
+    <p>{{ fname }}</p>
+    <p>{{ lname }}</p>
+    <p>{{ email }}</p>
+  </div>
